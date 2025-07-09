@@ -1,0 +1,224 @@
+<html>
+  <head>
+    <title>Visualización de Árbol Rojo-Negro</title>
+
+    <link rel="stylesheet" href="css/jquery-ui-1.8.11.custom.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/common-styles-responsive.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/lib/CustomEvents.js"></script>
+    <script type="text/javascript" src="js/lib/UndoFunctions.js"></script>
+    <script type="text/javascript" src="js/lib/AnimatedObject.js"></script>
+    <script type="text/javascript" src="js/lib/AnimatedLabel.js"></script>
+    <script type="text/javascript" src="js/lib/AnimatedCircle.js"></script>
+    <script type="text/javascript" src="js/lib/HighlightCircle.js"></script>
+    <script type="text/javascript" src="js/lib/Line.js"></script>
+    <script type="text/javascript" src="js/lib/ObjectManager.js"></script>
+    <script type="text/javascript" src="js/lib/AnimationMain.js"></script>
+    <script src="../../assets/js/instruction-box.js"></script>
+    <script type="text/javascript" src="js/lib/Algorithm.js"></script>
+    <script type="text/javascript" src="js/RedBlack.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body onload="init();" class="VisualizationMainPage">
+    <h1 class="main-title">ÁRBOL ROJO-NEGRO</h1>
+    <div id="container">
+      <div id="mainContent">
+        <div id="algoControlSection" style="text-align: center">
+          <div id="AlgorithmSpecificControls">
+            <input
+              type="number"
+              class="text-box"
+              id="control-demo-insert-text"
+              placeholder="Insertar"
+              size="4"
+            />
+            <button class="button-input" id="control-demo-insert-btn">
+              Insertar
+            </button>
+            <input
+              type="number"
+              class="text-box"
+              id="control-demo-delete-text"
+              placeholder="Eliminar"
+              size="4"
+            />
+            <button class="button-input" id="control-demo-delete-btn">
+              Eliminar
+            </button>
+            <input
+              type="number"
+              class="text-box"
+              id="control-demo-find-text"
+              placeholder="Buscar"
+              size="4"
+            />
+            <button class="button-input" id="control-demo-find-btn">
+              Buscar
+            </button>
+            <button class="button-input" id="control-demo-print">Imprimir</button>
+            <label style="display: none"
+              ><input type="checkbox" id="control-demo-null" />Mostrar hojas
+              nulas</label>
+            >
+          </div>
+        </div>
+
+        <div
+          class="comment-box"
+          style="margin: auto; padding-top: 2%; height: 15vh"
+        >
+          <b>Observaciones</b>
+          <p id="nextcomment"></p>
+        </div>
+        <div class="canvas-container">
+          <canvas id="canvas" width="1400" height="600"></canvas>
+        </div>
+
+        <div id="generalAnimationControlSection" style="display: none">
+          <div id="GeneralAnimationControls">
+            <td style="width: 10%">
+              <input
+                type="Button"
+                value="Saltar Atrás"
+                disabled=""
+                style="
+                  background-color: rgb(50, 151, 207);
+                  border-color: rgb(50, 151, 207);
+                  color: rgb(255, 255, 255);
+                  border-style: solid;
+                  font-size: 16px;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 100px;
+                "
+              />
+            </td>
+            <td style="width: 10%">
+              <input
+                type="Button"
+                value="Paso Atrás"
+                disabled=""
+                style="
+                  background-color: rgb(50, 151, 207);
+                  border-color: rgb(50, 151, 207);
+                  color: rgb(255, 255, 255);
+                  border-style: solid;
+                  font-size: 16px;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 100px;
+                "
+              />
+            </td>
+            <td style="width: 10%">
+              <input
+                type="Button"
+                value="Pausa"
+                style="
+                  background-color: rgb(50, 151, 207);
+                  border-color: rgb(50, 151, 207);
+                  color: rgb(255, 255, 255);
+                  border-style: solid;
+                  font-size: 16px;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 100px;
+                "
+              />
+            </td>
+            <td style="width: 10%">
+              <input
+                type="Button"
+                value="Paso Adelante"
+                disabled=""
+                style="
+                  background-color: rgb(50, 151, 207);
+                  border-color: rgb(50, 151, 207);
+                  color: rgb(255, 255, 255);
+                  border-style: solid;
+                  font-size: 16px;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 100px;
+                "
+              />
+            </td>
+            <td style="width: 10%">
+              <input
+                type="Button"
+                value="Saltar Adelante"
+                disabled=""
+                style="
+                  background-color: rgb(50, 151, 207);
+                  border-color: rgb(50, 151, 207);
+                  color: rgb(255, 255, 255);
+                  border-style: solid;
+                  font-size: 16px;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 100px;
+                "
+              />
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <div
+                      display="inline-block"
+                      float="left"
+                      class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                      style="width: 200px"
+                    >
+                      <a
+                        class="ui-slider-handle ui-state-default ui-corner-all"
+                        href="#"
+                        style="left: 75%"
+                      ></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">Velocidad de Animación</td>
+                </tr>
+              </table>
+            </td>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../assets/js/iframeResize.js"></script>
+
+    <script>
+      var collapsibleEl = document.getElementsByClassName("collapsible")[0];
+      collapsibleEl.addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<!--
+⠀ ／l         
+（ﾟ､ ｡ ７   
+⠀ l、ﾞ ~ヽ  
+  じしf_, )ノ
+-->
