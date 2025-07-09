@@ -13,7 +13,7 @@ Implementación completa de un **Árbol Rojo-Negro** (Red-Black Tree) con visual
 
 ## 👥 Integrantes
 
-- **[stiffis](https://github.com/stiffis)** - Desarrollador principal
+- Steve Andy Ildefonso Santos **[stiffis](https://github.com/stiffis)**
 
 ## 🗂️ Estructura del Proyecto
 
@@ -55,9 +55,11 @@ project-red-black-tree/
 ### 📂 redblack_tree/
 
 #### `RedBlackNode.js`
+
 Contiene la clase `RedBlackNode` que representa un nodo individual del árbol Red-Black.
 
 **Propiedades:**
+
 - `data`: El valor almacenado en el nodo
 - `left`: Referencia al hijo izquierdo
 - `right`: Referencia al hijo derecho
@@ -66,6 +68,7 @@ Contiene la clase `RedBlackNode` que representa un nodo individual del árbol Re
 - `isNullLeaf`: Indica si es una hoja nula
 
 **Métodos principales:**
+
 - `isLeftChild()`: Verifica si el nodo es hijo izquierdo
 - `isRightChild()`: Verifica si el nodo es hijo derecho
 - `getSibling()`: Obtiene el hermano del nodo
@@ -76,34 +79,42 @@ Contiene la clase `RedBlackNode` que representa un nodo individual del árbol Re
 - `setColor(color)`: Establece el color del nodo
 
 #### `RedBlackTree.js`
+
 Contiene la clase `RedBlackTree` que implementa la estructura del árbol Red-Black.
 
 **Propiedades:**
+
 - `root`: Nodo raíz del árbol
 - `nullLeaf`: Nodo especial que representa las hojas nulas
 
 **Métodos principales:**
+
 - `insert(data)`: Inserta un nuevo valor en el árbol
 - `fixInsertion(node)`: Arregla las violaciones de las propiedades del árbol después de insertar
 - `rotateLeft(node)`: Realiza una rotación hacia la izquierda
 - `rotateRight(node)`: Realiza una rotación hacia la derecha
 
 #### `index.js`
+
 Archivo que exporta ambas clases para facilitar la importación.
 
 ### 📂 rbt_operations/
 
 #### `redblack.html`
+
 Interfaz web interactiva que permite visualizar y manipular el árbol Red-Black.
 
 **Características:**
+
 - Visualización gráfica del árbol
 - Operaciones de inserción, eliminación y búsqueda
 - Controles de animación
 - Comentarios explicativos de las operaciones
 
 #### `js/`
+
 Contiene toda la lógica de visualización y animación:
+
 - **RedBlack.js**: Implementación específica para la visualización
 - **lib/**: Bibliotecas de animación y manejo de objetos gráficos
 
@@ -141,15 +152,6 @@ tree.insert(15);
 - **CSS3**: Estilos y diseño responsive
 - **Canvas API**: Renderizado gráfico del árbol
 - **jQuery**: Manipulación del DOM y animaciones
-
-## 🎯 Características
-
-- ✅ Implementación completa del árbol Red-Black
-- ✅ Visualización interactiva en tiempo real
-- ✅ Operaciones de inserción, eliminación y búsqueda
-- ✅ Animaciones paso a paso
-- ✅ Interfaz responsiva
-- ✅ Comentarios explicativos durante las operaciones
 
 ## 📦 Instalación
 
@@ -191,10 +193,6 @@ Este proyecto está bajo la Licencia GPL v3. Consulta el archivo [LICENSE](LICEN
 - [Red-Black Trees - Wikipedia](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree)
 
 ---
-
-<div align="center">
-  <p>Hecho con ❤️ por <a href="https://github.com/stiffis">stiffis</a></p>
-</div>
 
 <!--
 ⠀ ／l
