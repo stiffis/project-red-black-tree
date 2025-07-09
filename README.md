@@ -14,6 +14,7 @@ Implementación completa de un **Árbol Rojo-Negro** (Red-Black Tree) con visual
 ## 👥 Integrantes
 
 - Steve Andy Ildefonso Santos **[stiffis](https://github.com/stiffis)**
+- Bladimir Alferez Vicente **[bladimirAlfer](https://github.com/bladimirAlfer)**
 
 ## 🗂️ Estructura del Proyecto
 
