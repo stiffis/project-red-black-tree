@@ -195,9 +195,7 @@ Este proyecto está bajo la Licencia GPL v3. Consulta el archivo [LICENSE](LICEN
 
 ---
 
-<!--
 ⠀ ／l
 （ﾟ､ ｡ ７
 ⠀ l、ﾞ ~ヽ
-  じしf_, )ノ
--->
+じしf\_, )ノ

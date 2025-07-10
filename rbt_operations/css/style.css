@@ -32,7 +32,7 @@
 body {
   background-color: var(--ctp-base);
   color: var(--ctp-text);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -210,7 +210,7 @@ body {
   .canvas-container {
     padding: 15px;
   }
-  
+
   #canvas {
     max-width: 100%;
     height: auto;
@@ -222,7 +222,7 @@ body {
     padding: 10px;
     margin: 10px 0;
   }
-  
+
   #canvas {
     width: 100%;
     max-width: 100%;
@@ -240,7 +240,9 @@ body {
 
 /* Animation control buttons */
 input[type="Button"] {
-  background: linear-gradient(135deg, var(--ctp-blue), var(--ctp-sapphire)) !important;
+  background: linear-gradient(135deg,
+      var(--ctp-blue),
+      var(--ctp-sapphire)) !important;
   border: none !important;
   border-radius: 20px !important;
   color: var(--ctp-base) !important;
@@ -253,11 +255,15 @@ input[type="Button"] {
 input[type="Button"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(137, 180, 250, 0.4) !important;
-  background: linear-gradient(135deg, var(--ctp-sapphire), var(--ctp-blue)) !important;
+  background: linear-gradient(135deg,
+      var(--ctp-sapphire),
+      var(--ctp-blue)) !important;
 }
 
 input[type="Button"]:disabled {
-  background: linear-gradient(135deg, var(--ctp-surface1), var(--ctp-surface2)) !important;
+  background: linear-gradient(135deg,
+      var(--ctp-surface1),
+      var(--ctp-surface2)) !important;
   color: var(--ctp-overlay0) !important;
   cursor: not-allowed;
   transform: none;
@@ -272,7 +278,9 @@ input[type="Button"]:disabled {
 }
 
 .ui-slider-handle {
-  background: linear-gradient(135deg, var(--ctp-blue), var(--ctp-lavender)) !important;
+  background: linear-gradient(135deg,
+      var(--ctp-blue),
+      var(--ctp-lavender)) !important;
   border: none !important;
   border-radius: 50% !important;
   width: 20px !important;
@@ -282,7 +290,9 @@ input[type="Button"]:disabled {
 }
 
 .ui-slider-handle:hover {
-  background: linear-gradient(135deg, var(--ctp-lavender), var(--ctp-blue)) !important;
+  background: linear-gradient(135deg,
+      var(--ctp-lavender),
+      var(--ctp-blue)) !important;
   box-shadow: 0 4px 12px rgba(137, 180, 250, 0.5) !important;
 }
 
@@ -313,7 +323,7 @@ input[type="checkbox"]:checked {
 }
 
 input[type="checkbox"]:checked::after {
-  content: '✓';
+  content: "✓";
   position: absolute;
   top: -2px;
   left: 2px;

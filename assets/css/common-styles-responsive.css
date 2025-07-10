@@ -10,15 +10,35 @@
     padding: 7px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    width: 14%; 
+    width: 14%;
 }
 
-.legend { list-style: none; }
-.legend li { padding-bottom : 1.5vw; width: 20vw; }
-.legend span { border: 0.1vw solid black; float: left; border-radius: 50%;}
-.legend .grey { background-color: grey; }
-.legend .green { background-color: #a4c652; }
-.legend .black { background-color: black; }
+.legend {
+    list-style: none;
+}
+
+.legend li {
+    padding-bottom: 1.5vw;
+    width: 20vw;
+}
+
+.legend span {
+    border: 0.1vw solid black;
+    float: left;
+    border-radius: 50%;
+}
+
+.legend .grey {
+    background-color: grey;
+}
+
+.legend .green {
+    background-color: #a4c652;
+}
+
+.legend .black {
+    background-color: black;
+}
 
 .button-input {
     border-radius: 50vw;
@@ -35,8 +55,8 @@
 }
 
 .button-input:hover {
-    background-color:gray;
-    cursor:pointer;
+    background-color: gray;
+    cursor: pointer;
 }
 
 .comment-box {
@@ -51,7 +71,7 @@
     width: 100%;
     transition: width 0.2s ease-out;
     border: 0.1vw solid grey;
-    z-index : 10;
+    z-index: 10;
 }
 
 .collapsible {
@@ -71,7 +91,8 @@
     border: 0;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
     background-color: "white";
 }
 
